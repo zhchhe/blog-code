@@ -5,9 +5,9 @@
 # Site
 title: 青椒
 subtitle: ''
-description: '描述'
+description: "一蓑烟雨任平生"
 keywords:
-author: 竹杖芒鞋轻胜马
+author: Zhch's Blog
 language: zh-CN
 timezone: ''
 
@@ -105,3 +105,22 @@ deploy:
   type: git
   repository: https://github.com/zhchhe/zhchhe.github.io.git
   branch: main
+
+
+# 主题备用配置
+theme_config:
+
+  # next主题
+  scheme: Gemini
+
+  # 黑暗mod false true
+  darkmode: true
+
+    # 侧边栏头像
+  avatar:
+    # 替换默认图片并在此处设置url
+    url: https://github.com/zhchhe/image-bed/raw/fb4abe7d1106dda7e5256f6b31061a40707e717a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/%E5%A4%B4%E5%83%8F.jpg
+    # 如果为true，头像将显示为圆形
+    rounded: false
+    # 如果为true，头像会随着光标旋转。
+    rotated: false
