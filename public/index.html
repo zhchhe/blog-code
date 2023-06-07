@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
-
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.17.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="一蓑烟雨任平生">
 <meta property="og:type" content="website">
@@ -51,6 +51,8 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+
+
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -61,6 +63,9 @@
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -81,6 +86,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+  </ul>
+</nav>
 
 
 
@@ -133,12 +142,33 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zhchhe" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zhchhe" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
 
         </div>
       </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
     </div>
 
     
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://blog.imkasen.com/" title="https:&#x2F;&#x2F;blog.imkasen.com&#x2F;" rel="noopener" target="_blank">别人的网站</a>
+            </li>
+        </ul>
+      </div>
+    </div>
   </aside>
 
 
@@ -182,9 +212,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-06-06 22:07:11 / 修改时间：22:18:47" itemprop="dateCreated datePublished" datetime="2023-06-06T22:07:11+08:00">2023-06-06</time>
+      <time title="创建时间：2023-06-06 22:07:11" itemprop="dateCreated datePublished" datetime="2023-06-06T22:07:11+08:00">2023-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-07 15:44:21" itemprop="dateModified" datetime="2023-06-07T15:44:21+08:00">2023-06-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -197,6 +233,21 @@
     </span>
 
   
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>13 分钟</span>
+    </span>
 </div>
 
         </div>
@@ -206,73 +257,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
-<li>GitHub 账号</li>
-<li>安装 Git</li>
-<li>安装最新版 Node.js</li>
-</ol>
-<h2 id="创建-GitHub-仓库"><a href="#创建-GitHub-仓库" class="headerlink" title="创建 GitHub 仓库"></a>创建 GitHub 仓库</h2><ol>
-<li>在 GitHub 上创建一个仓库以上传我们本地的网页。</li>
-<li>仓库名为 <code>&lt;你的 GitHub 用户名&gt;.github.io</code> ，然后创建此仓库此步一定不能出错，仓库名必须是用户名后面加 <code>github.io</code> 。</li>
-</ol>
-<h2 id="本地安装Hexo并初始化"><a href="#本地安装Hexo并初始化" class="headerlink" title="本地安装Hexo并初始化"></a>本地安装Hexo并初始化</h2><p>我们采用Hexo来创建我们的博客网站，Hexo 是一个基于NodeJS的静态博客网站生成器，使用Hexo不需开发，只要进行一些必要的配置即可生成一个个性化的博客网站，非常方便。</p>
-<ol>
-<li>在本地创建一个文件夹用来建博客网站，在文件夹内 shift+鼠标右键 在此处打开 <code>Git Bash Here</code> 。</li>
-<li>在文件夹中打开的Git Bash窗口中，用 <code>npm install -g hexo-cli</code> 指令安装 hexo 博客。</li>
-<li>安装完成后输入 <code>npx hexo init</code> 初始化 hexo 博客。<blockquote>
-<p>初始化过程会比较慢，慢慢等就好了。</p>
-</blockquote>
-</li>
-<li>再接着执行命令 <code>npx hexo g</code> 进行生成网页。</li>
-<li>这时网页已经部署完成，接着输入命令 <code>hexo s</code> 本地启动即可：<br>此时浏览器输入 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 就可以打开新部署的网页了。<blockquote>
-<p>Hexo官网也有详尽的教程。<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">文档 | Hexo</a></p>
-</blockquote>
-</li>
-</ol>
-<blockquote>
-<p>如果你想把整个代码文件夹都交给GitHub托管，而不是只是让GitHub托管网页，那么可以看我官网的另一个教程（本来想自己写教程，第一次部署成功了，第二次怎么也搞不明白了，于是就索性不写了……不是我偷懒……）</p>
-</blockquote>
-<blockquote>
-<p>或者等这个网站部署完以后，再在 GitHub 上新建一个库专门用来存放网站源代码。</p>
-</blockquote>
-<h2 id="将-Hexo-一键部署到-GitHub"><a href="#将-Hexo-一键部署到-GitHub" class="headerlink" title="将 Hexo 一键部署到 GitHub"></a>将 Hexo 一键部署到 GitHub</h2><ol>
-<li>回到你希望存放博客源代码的博客文件夹中，打开 <code>Git Bash</code>，在 博客文件夹中安装hexo的 <code>Git</code> 部署插件，输入命令安装：</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>我们去博客文件夹📂下,用编辑器打开文件 <code>_config.yml</code> ,找到 <code>deploy</code> 配置项填入以下内容（一般在最下面）:</li>
-</ol>
-<blockquote>
-<p>这一步的意思是我们使用 <code>hexo-deployer-git</code> 一键部署要指定的目标仓库和目标分支，指定错的话你在本地生成的网页文件夹就上传不到GitHub库中了。</p>
-</blockquote>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line"><span class="code">	type: git</span></span><br><span class="line"><span class="code">	repository: https://github.com/你的GitHub用户名/你的GitHub用户名.github.io.git  #你的仓库地址</span></span><br><span class="line"><span class="code">	branch: main #绑定的仓库分支</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>提示：可以去 GitHub 仓库中查看默认分支是什么再设置 deploy。</p>
-</blockquote>
-<blockquote>
-<p>注意：这里注意一下语法，每个 <code>冒号：</code> 后面都有一个空格</p>
-</blockquote>
-<p>仓库地址如图：</p>
-<p><img src="https://github.com/zhchhe/image-bed/raw/3e0ac1c410ed2719a53537b2296d13ea5c069e5a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-06_21-58-26.png" alt="仓库地址"></p>
-<ol start="3">
-<li>然后在博客文件夹下打开 <code>git bash</code>命令行 分别输入以下三条命令：</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean   #清除缓存文件 db.json 和已生成的静态网页文件夹 public</span><br><span class="line">hexo g       #重新生成新修改的网站静态文件到默认设置的 public 文件夹(g是 generate 的缩写)</span><br><span class="line">hexo d       #自动部署网站静态文件夹（public）到设定的仓库(d是 deploy 的缩写)</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>现在为止就能打开 <code>https://xxx.github.io</code> 这个网址了。</li>
-</ol>
-<p>记住最后这三条命令，后面经常用到，另外还有一个本地网页运行命令 <code>hexo s</code> 可以在本地  <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 临时预览网页的样子（因为网页部署到GitHub也是要花时间的……）</p>
-<ol start="5">
-<li>重要的一点来了，有的同学会抱怨为什么已经部署了但是 <code>https://xxx.github.io</code> 还是显示错误啊，这时候你打开自己的GitHub库，看看库的状态是不是正在部署。</li>
-</ol>
-<p><img src="https://github.com/zhchhe/image-bed/raw/3e0ac1c410ed2719a53537b2296d13ea5c069e5a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-06_21-58-48.png" alt="正在部署"></p>
-<p>这里显示黄色点且点开以后在转圈表示网页正在部署，大约一分钟左右再重新刷新此页面，待这里变成绿色的 √ ，就算是部署完成了。</p>
-<p><img src="https://github.com/zhchhe/image-bed/raw/3e0ac1c410ed2719a53537b2296d13ea5c069e5a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-06_21-59-00.png" alt="部署完成"></p>
-<p>这时候再打开  <code>https://xxx.github.io</code> 这个网页就会显示正常了。</p>
-
+          <p>GitHub是一个非常好用的用来存放代码或图片的仓库，搭配Hexo使用可以在 GitHub Pages 上搭建个人博客。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/06/06/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -334,10 +327,25 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-06 17:49:26" itemprop="dateModified" datetime="2023-06-06T17:49:26+08:00">2023-06-06</time>
+      <time title="修改时间：2023-06-07 15:53:11" itemprop="dateModified" datetime="2023-06-07T15:53:11+08:00">2023-06-07</time>
     </span>
 
   
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>127</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
 </div>
 
         </div>
@@ -347,20 +355,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>！ 这是您的第一篇文章。 查看 <a target="_blank" rel="noopener" href="https://hexo.io/docs/">文档</a> 了解更多信息。 如果你在使用 Hexo 的过程中遇到任何问题，你可以在 <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">疑难解答</a> 中找到答案，也可以在 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/06/04/hello-world/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -379,7 +382,9 @@
 
 
 
+    <div class="post-title">
 </div>
+    </div>
   </main>
 
   <footer class="footer">
@@ -394,6 +399,20 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Zhch's Blog</span>
 </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">1k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">15 分钟</span>
+  </span>
+</div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
 
@@ -401,10 +420,9 @@
   </footer>
 
   
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up fa-lg"></i>
-    <span>0%</span>
-  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/zhchhe" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>

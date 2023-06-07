@@ -107,6 +107,24 @@ deploy:
   branch: main
 
 
+
+
+# hexo-word-counter插件
+symbols_count_time:
+  # NexT 显示帖子元数据中的帖子词数
+  symbols: true
+  # NexT 在帖子元数据显示帖子的估计阅读时间
+  time: true
+  # NexT 在页脚部分显示所有帖子的单词数
+  total_symbols: true
+  # NexT 在页脚部分显示所有帖子的预计阅读时间
+  total_time: true
+  # 平均字长（字中的字符数）
+  awl: 4
+  # 每分钟的平均字数
+  wpm: 80
+
+
 # 主题备用配置
 theme_config:
 
@@ -116,11 +134,103 @@ theme_config:
   # 黑暗mod false true
   darkmode: true
 
-    # 侧边栏头像
+  # 侧边栏头像
   avatar:
     # 替换默认图片并在此处设置url
     url: https://github.com/zhchhe/image-bed/raw/fb4abe7d1106dda7e5256f6b31061a40707e717a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/%E5%A4%B4%E5%83%8F.jpg
     # 如果为true，头像将显示为圆形
     rounded: false
-    # 如果为true，头像会随着光标旋转。
-    rotated: false
+
+  # next菜单自定义页面
+  menu:
+    # 首页
+    home: / || fa fa-home
+    # 归档
+    archives: /archives/ || fa fa-archive
+    #标签
+    tags: /tags/ || fa fa-tags
+    #分类
+    categories: /categories/ || fa fa-th
+    # 关于
+    about: /about/ || fa fa-user
+    # 自定义
+    #custom-name: /custom-name/ || fa fa-heart
+    # 日程表
+    #schedule: /schedule/ || fa fa-calendar
+    # 站点地图
+    #sitemap: /sitemap.xml || fa fa-sitemap
+    # 公益404
+    #commonweal: /404/ || fa fa-heartbeat
+
+  # 预连接（preconnect）资源提示，以在网页加载过程中提前建立与字体和插件来源的连接。
+  preconnect: true
+
+
+
+  # 显示复制粘贴功能的复制结果
+  codeblock:
+    copy_button:
+      enable: true
+
+  #返回顶部按钮
+  back2top:
+    # 显示 Back to top 按钮
+    enable: true
+    # 将按钮放在边栏中
+    sidebar: true
+    # 在 Back to top 按钮中显示滚动百分比标签
+    scrollpercent: true
+
+  # 页面滚动阅读进度指示器
+  reading_progress:
+    enable: true
+    # 可用的值: left | right
+    start_at: left
+    # 可用的值: top | bottom
+    position: top
+    reversed: false
+    color: "#4dd17c"
+    height: 4px
+
+  # 右上角提供GitHub横幅
+  github_banner:
+    enable: true
+    permalink: https://github.com/zhchhe
+
+  font:
+    enable: false
+
+    # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
+    host:
+
+    # Global font settings used for all elements inside <body>.
+    global:
+      external: true
+      family: LXGW WenKai
+      size:
+
+
+  # 社交链接
+  # 用法: `Key: permalink || icon`
+  # Key 是显示给最终用户的链接标签
+  # `||` 分隔符之前的值是目标永久链接，`||` 分隔符之后的值是 Font Awesome 图标的名称
+  social:
+    GitHub: https://github.com/zhchhe || fab fa-github
+    #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+    #Weibo: https://weibo.com/yourname || fab fa-weibo
+    #Twitter: https://twitter.com/yourname || fab fa-twitter
+    #FB Page: https://www.facebook.com/yourname || fab fa-facebook
+    #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
+    #YouTube: https://youtube.com/yourname || fab fa-youtube
+    #Instagram: https://instagram.com/yourname || fab fa-instagram
+    #Skype: skype:yourname?call|chat || fab fa-skype
+
+  # 博客卷
+  links_settings:
+    icon: fa fa-globe
+    # 正确的值: block | inline
+    layout: inline  
+  # 链接
+  links:
+    别人的网站: https://blog.imkasen.com/
+
