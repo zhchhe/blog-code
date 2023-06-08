@@ -28,7 +28,7 @@ npm install --save lxgw-wenkai-tc-webfont
 npm install --save lxgw-wenkai-screen-webfont
 ```
 
-> 如果出现npm卡住则需要更换npm源，请看我的另一篇文章 [解决npm经常下载过慢甚至卡住不动的问题 | 青椒 (zhchhe.github.io)](https://zhchhe.github.io/2023/06/08/%E8%A7%A3%E5%86%B3npm%E7%BB%8F%E5%B8%B8%E4%B8%8B%E8%BD%BD%E8%BF%87%E6%85%A2%E7%94%9A%E8%87%B3%E5%8D%A1%E4%BD%8F%E4%B8%8D%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98/#more)
+> 如果出现npm卡住则需要更换npm源，请看我的另一篇文章 [解决npm经常下载过慢甚至卡住不动的问题](https://zhchhe.github.io/2023/06/08/%E8%A7%A3%E5%86%B3npm%E7%BB%8F%E5%B8%B8%E4%B8%8B%E8%BD%BD%E8%BF%87%E6%85%A2%E7%94%9A%E8%87%B3%E5%8D%A1%E4%BD%8F%E4%B8%8D%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98)
 
 安装成功后 hexo 的插件文件夹 `Blog\node_modules\` 中会多出来 霞鹜文楷的文件夹。
 

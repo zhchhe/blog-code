@@ -1,0 +1,191 @@
+<h1 id="gitalk">Gitalk</h1>
+<p><a href="https://www.npmjs.com/package/gitalk"><img
+src="https://img.shields.io/npm/v/gitalk.svg?style=flat-square"
+alt="NPM" /></a> <a href="https://cdnjs.com/libraries/gitalk"><img
+src="https://img.shields.io/cdnjs/v/gitalk.svg?style=flat-square"
+alt="CDNJS" /></a> <a
+href="https://www.jsdelivr.com/package/npm/gitalk"><img
+src="https://data.jsdelivr.com/v1/package/npm/gitalk/badge"
+alt="jsdelivr" /></a> <a href="https://david-dm.org/gitalk/gitalk"><img
+src="https://david-dm.org/gitalk/gitalk.svg?style=flat-square"
+alt="david-dm" /></a> <a href="https://travis-ci.org/gitalk/gitalk"><img
+src="https://img.shields.io/travis/gitalk/gitalk/master.svg?style=flat-square"
+alt="travis" /></a> <a
+href="https://coveralls.io/github/gitalk/gitalk"><img
+src="https://img.shields.io/coveralls/gitalk/gitalk/master.svg?style=flat-square"
+alt="coveralls" /></a> <a
+href="https://unpkg.com/gitalk/dist/gitalk.min.js"><embed
+src="https://img.badgesize.io/https://unpkg.com/gitalk/dist/gitalk.min.js?compression=gzip&amp;style=flat-square" /></a></p>
+<p>Gitalk is a modern comment component based on GitHub Issue and
+Preact.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Authentication with github account</li>
+<li>Serverless, all comments will be stored as github issues</li>
+<li>Both personal and organization github projects can be used to store
+comments</li>
+<li>Localization, support multiple languages [en, zh-CN, zh-TW, es-ES,
+fr, ru, de, pl, ko, fa, ja]</li>
+<li>Facebook-like distraction free mode (Can be enabled via the
+<code>distractionFreeMode</code> option)</li>
+<li>Hotkey submit comment (cmd|ctrl + enter)</li>
+</ul>
+<p><a
+href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md">中文说明</a>
+<a href="https://gitalk.github.io">Demo</a></p>
+<h2 id="install">Install</h2>
+<p>Two ways.</p>
+<ul>
+<li>links</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- or --&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://unpkg.com/gitalk/dist/gitalk.css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://unpkg.com/gitalk/dist/gitalk.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span></code></pre></div>
+<ul>
+<li>npm install</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> i <span class="at">--save</span> gitalk</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> <span class="st">&#39;gitalk/dist/gitalk.css&#39;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> Gitalk <span class="im">from</span> <span class="st">&#39;gitalk&#39;</span></span></code></pre></div>
+<h2 id="usage">Usage</h2>
+<p>Firstly, you need choose a public github repository (existed or
+create a new one) for store comments,</p>
+<p>Then create A <strong>GitHub Application</strong> if you don’t have
+one, <a href="https://github.com/settings/applications/new">Click here
+to register</a> a new one. <strong>Note:</strong> You must specify the
+website domain url in the <code>Authorization callback URL</code>
+field.</p>
+<p>Lastly, you can choose how to apply to the page as below:</p>
+<h3 id="method-one">Method One</h3>
+<p>Add a container to your page:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;gitalk-container&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span></code></pre></div>
+<p>Then use the Javascript code below to generate the gitalk plugin:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> gitalk <span class="op">=</span> <span class="kw">new</span> <span class="fu">Gitalk</span>({</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">clientID</span><span class="op">:</span> <span class="st">&#39;GitHub Application Client ID&#39;</span><span class="op">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">clientSecret</span><span class="op">:</span> <span class="st">&#39;GitHub Application Client Secret&#39;</span><span class="op">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">repo</span><span class="op">:</span> <span class="st">&#39;GitHub repo&#39;</span><span class="op">,</span>      <span class="co">// The repository of store comments,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">owner</span><span class="op">:</span> <span class="st">&#39;GitHub repo owner&#39;</span><span class="op">,</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">admin</span><span class="op">:</span> [<span class="st">&#39;GitHub repo owner and collaborators, only these guys can initialize github issues&#39;</span>]<span class="op">,</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">id</span><span class="op">:</span> location<span class="op">.</span><span class="at">pathname</span><span class="op">,</span>      <span class="co">// Ensure uniqueness and length less than 50</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">distractionFreeMode</span><span class="op">:</span> <span class="kw">false</span>  <span class="co">// Facebook-like distraction free mode</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>gitalk<span class="op">.</span><span class="fu">render</span>(<span class="st">&#39;gitalk-container&#39;</span>)</span></code></pre></div>
+<h3 id="method-two-use-in-react">Method Two: Use in React</h3>
+<p>Import the Gitalk with</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> GitalkComponent <span class="im">from</span> <span class="st">&quot;gitalk/dist/gitalk-component&quot;</span><span class="op">;</span></span></code></pre></div>
+<p>And use the component like</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;GitalkComponent</span> <span class="ot">options</span><span class="op">=</span><span class="va">{</span>{</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">clientID</span><span class="op">:</span> <span class="st">&quot;...&quot;</span><span class="op">,</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// options below</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}<span class="va">}</span> <span class="fu">/&gt;</span></span></code></pre></div>
+<h2 id="options">Options</h2>
+<ul>
+<li><p><strong>clientID</strong> <code>String</code></p>
+<p><strong>Required</strong>. GitHub Application Client ID.</p></li>
+<li><p><strong>clientSecret</strong> <code>String</code></p>
+<p><strong>Required</strong>. GitHub Application Client Secret.</p></li>
+<li><p><strong>repo</strong> <code>String</code></p>
+<p><strong>Required</strong>. GitHub repository.</p></li>
+<li><p><strong>owner</strong> <code>String</code></p>
+<p><strong>Required</strong>. GitHub repository owner. Can be personal
+user or organization.</p></li>
+<li><p><strong>admin</strong> <code>Array</code></p>
+<p><strong>Required</strong>. GitHub repository owner and collaborators.
+(Users who having write access to this repository)</p></li>
+<li><p><strong>id</strong> <code>String</code></p>
+<p>Default: <code>location.href</code>.</p>
+<p>The unique id of the page. Length must less than 50.</p></li>
+<li><p><strong>number</strong> <code>Number</code></p>
+<p>Default: <code>-1</code>.</p>
+<p>The issue ID of the page, if the <code>number</code> attribute is not
+defined, issue will be located using <code>id</code>.</p></li>
+<li><p><strong>labels</strong> <code>Array</code></p>
+<p>Default: <code>['Gitalk']</code>.</p>
+<p>GitHub issue labels.</p></li>
+<li><p><strong>title</strong> <code>String</code></p>
+<p>Default: <code>document.title</code>.</p>
+<p>GitHub issue title.</p></li>
+<li><p><strong>body</strong> <code>String</code></p>
+<p>Default: <code>location.href + header.meta[description]</code>.</p>
+<p>GitHub issue body.</p></li>
+<li><p><strong>language</strong> <code>String</code></p>
+<p>Default:
+<code>navigator.language || navigator.userLanguage</code>.</p>
+<p>Localization language key, support [<code>en</code>,
+<code>zh-CN</code>, <code>zh-TW</code>, <code>es-ES</code>,
+<code>fr</code>, <code>ru</code>, <code>de</code>, <code>pl</code>,
+<code>ko</code>, <code>fa</code>, <code>ja</code>].</p></li>
+<li><p><strong>perPage</strong> <code>Number</code></p>
+<p>Default: <code>10</code>.</p>
+<p>Pagination size, with maximum 100.</p></li>
+<li><p><strong>distractionFreeMode</strong> <code>Boolean</code></p>
+<p>Default: false.</p>
+<p>Facebook-like distraction free mode.</p></li>
+<li><p><strong>pagerDirection</strong> <code>String</code></p>
+<p>Default: ‘last’</p>
+<p>Comment sorting direction, available values are <code>last</code> and
+<code>first</code>.</p></li>
+<li><p><strong>createIssueManually</strong> <code>Boolean</code></p>
+<p>Default: <code>false</code>.</p>
+<p>By default, Gitalk will create a corresponding github issue for your
+every single page automatically when the logined user is belong to the
+<code>admin</code> users. You can create it manually by setting this
+option to <code>true</code>.</p></li>
+<li><p><strong>proxy</strong> <code>String</code></p>
+<p>Default:
+<code>https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</code>.</p>
+<p>GitHub oauth request reverse proxy for CORS. <a
+href="https://github.com/isaacs/github/issues/330">Why need
+this?</a></p></li>
+<li><p><strong>flipMoveOptions</strong> <code>Object</code></p>
+<p>Default:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">staggerDelayBy</span><span class="op">:</span> <span class="dv">150</span><span class="op">,</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">appearAnimation</span><span class="op">:</span> <span class="st">&#39;accordionVertical&#39;</span><span class="op">,</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">enterAnimation</span><span class="op">:</span> <span class="st">&#39;accordionVertical&#39;</span><span class="op">,</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">leaveAnimation</span><span class="op">:</span> <span class="st">&#39;accordionVertical&#39;</span><span class="op">,</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
+<p>Comment list animation. <a
+href="https://github.com/joshwcomeau/react-flip-move/blob/master/documentation/enter_leave_animations.md">Reference</a></p></li>
+<li><p><strong>enableHotKey</strong> <code>Boolean</code></p>
+<p>Default: <code>true</code>.</p>
+<p>Enable hot key (cmd|ctrl + enter) submit comment.</p></li>
+</ul>
+<h2 id="instance-methods">Instance Methods</h2>
+<ul>
+<li><p><strong>render(String/HTMLElement)</strong></p>
+<p>Init render and mount plugin.</p></li>
+</ul>
+<h2 id="typescript">TypeScript</h2>
+<p>TypeScript definitions for options and Gitalk class come with the
+package and should be automatically detected.</p>
+<p>Definitions for React component usage are not included.</p>
+<h2 id="contributing">Contributing</h2>
+<ol type="1">
+<li><a href="https://github.com/gitalk/gitalk/fork">Fork the
+repository</a> and create your branch from master</li>
+<li>If you’ve added code that should be tested, add tests!</li>
+<li>If you’ve changed APIs, update the documentation.</li>
+<li>Ensure the test suite passes (npm test).</li>
+<li>Make sure your code lints (npm run lint).</li>
+<li>Commit your changes (git commit) <a
+href="https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines">Commit
+Message Format Reference</a></li>
+</ol>
+<h2 id="similar-projects">Similar Projects</h2>
+<ul>
+<li><a href="https://github.com/imsun/gitment">gitment</a></li>
+<li><a href="https://vssue.js.org">vssue</a></li>
+</ul>
+<h2 id="license">LICENSE</h2>
+<p>MIT</p>

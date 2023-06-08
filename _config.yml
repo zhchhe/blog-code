@@ -125,6 +125,62 @@ symbols_count_time:
   wpm: 80
 
 
+
+
+# 此插件发出命令 pandoc 来调用 pandoc
+pandoc:
+  pandoc_path: C:/Program Files/Pandoc/pandoc.exe
+  args:
+    - '-f'
+    - 'markdown'
+    - '-t'
+    - 'html'
+    - '--mathjax'
+
+# https://theme-next.js.org/docs/third-party-services/math-equations.html
+# mathjax数学公式渲染
+math:
+  # Default (false)将根据需要加载mathjax / katex脚本。
+  # 也就是说，它只渲染那些有' mathjax: true '在 little-form 的页面。
+  # 如果将其设置为true，它将每页加载mathjax / katex脚本。
+  every_page: false
+
+  mathjax:
+    enable: true
+    # Available values: none | ams | all
+    tags: ams
+
+# https://theme-next.js.org/docs/third-party-services/comments.html
+# 多评论系统支持
+comments:
+  # Available values: tabs | buttons
+  style: tabs
+  # 选择默认显示的评论系统
+  # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances | isso
+  active:
+  # 设置`true`表示记住访问者选择的评论系统
+  storage: true
+  # 延迟加载所有评论系统。
+  lazyload: false
+
+
+# Gitalk 评论插件
+# For more information: https://gitalk.github.io
+gitalk:
+  enable: true
+  github_id: zhchhe # GitHub repo owner
+  repo: Gitalk-Blog-Talk # Repository name to store issues
+  client_id: 6df1351813265c566a9a # GitHub Application Client ID
+  client_secret: e5d4b3efac919636edce77be1f3811ee1b0acde9 # GitHub Application Client Secret
+  admin_user: zhchhe # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
+  distraction_free_mode: true # Facebook-like distraction free mode
+  # When the official proxy is not available, you can change it to your own proxy address
+  proxy: https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token # This is official proxy adress
+  # Gitalk's display language depends on user's browser or system environment
+  # If you want everyone visiting your site to see a uniform language, you can set a force language value
+  # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
+  language: zh-CN
+
 # 主题备用配置
 theme_config:
 
@@ -166,11 +222,23 @@ theme_config:
   preconnect: true
 
 
-
-  # 显示复制粘贴功能的复制结果
+  # 设置代码块高亮样式
+  # 参考网址：https://theme-next.js.org/highlight/
   codeblock:
+    # Code Highlight theme
+    # All available themes: https://theme-next.js.org/highlight/
+    theme:
+      light: base16/windows-10
+      dark: base16/windows-10
+      #dark: stackoverflow-dark
+    prism:
+      light: base16/windows-10
+      dark: base16/windows-10
+    # 在代码块上添加复制按钮
     copy_button:
       enable: true
+      # Available values: default | flat | mac
+      style:
 
   #返回顶部按钮
   back2top:
