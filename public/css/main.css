@@ -2672,3 +2672,18 @@ header.header {
     padding: 10px 12px;
   }
 }
+@import url('./lxgwwenkaimono-regular.css');
+@import url('./lxgwwenkai-regular.css');
+@import url('./lxgwwenkai-light.css');
+@import url('./lxgwwenkaimono-light.css');
+@import url('./lxgwwenkai-bold.css');
+@import url('./lxgwwenkaimono-bold.css');
+
+body {
+  font-family: "LXGW WenKai", sans-serif;
+}
+/* Mono font (optional) */
+pre,
+code {
+  font-family: "LXGW WenKai Mono", sans-serif;
+}
