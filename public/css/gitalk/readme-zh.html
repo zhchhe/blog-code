@@ -1,152 +1,174 @@
-<h1 id="Gitalk"><a href="#Gitalk" class="headerlink" title="Gitalk"></a>Gitalk</h1><p><a href="https://www.npmjs.com/package/gitalk"><img src="https://img.shields.io/npm/v/gitalk.svg?style=flat-square" alt="NPM"></a><br><a href="https://cdnjs.com/libraries/gitalk"><img src="https://img.shields.io/cdnjs/v/gitalk.svg?style=flat-square" alt="CDNJS"></a><br><a href="https://www.jsdelivr.com/package/npm/gitalk"><img src="https://data.jsdelivr.com/v1/package/npm/gitalk/badge" alt="jsdelivr"></a><br><a href="https://david-dm.org/gitalk/gitalk"><img src="https://david-dm.org/gitalk/gitalk.svg?style=flat-square" alt="david-dm"></a><br><a href="https://travis-ci.org/gitalk/gitalk"><img src="https://img.shields.io/travis/gitalk/gitalk/master.svg?style=flat-square" alt="travis"></a><br><a href="https://coveralls.io/github/gitalk/gitalk"><img src="https://img.shields.io/coveralls/gitalk/gitalk/master.svg?style=flat-square" alt="coveralls"></a><br><a href="https://unpkg.com/gitalk/dist/gitalk.min.js"><img src="https://img.badgesize.io/https://unpkg.com/gitalk/dist/gitalk.min.js?compression=gzip&style=flat-square" alt="gzip-size"></a></p>
+<h1 id="gitalk">Gitalk</h1>
+<p><a href="https://www.npmjs.com/package/gitalk"><img
+src="https://img.shields.io/npm/v/gitalk.svg?style=flat-square"
+alt="NPM" /></a> <a href="https://cdnjs.com/libraries/gitalk"><img
+src="https://img.shields.io/cdnjs/v/gitalk.svg?style=flat-square"
+alt="CDNJS" /></a> <a
+href="https://www.jsdelivr.com/package/npm/gitalk"><img
+src="https://data.jsdelivr.com/v1/package/npm/gitalk/badge"
+alt="jsdelivr" /></a> <a href="https://david-dm.org/gitalk/gitalk"><img
+src="https://david-dm.org/gitalk/gitalk.svg?style=flat-square"
+alt="david-dm" /></a> <a href="https://travis-ci.org/gitalk/gitalk"><img
+src="https://img.shields.io/travis/gitalk/gitalk/master.svg?style=flat-square"
+alt="travis" /></a> <a
+href="https://coveralls.io/github/gitalk/gitalk"><img
+src="https://img.shields.io/coveralls/gitalk/gitalk/master.svg?style=flat-square"
+alt="coveralls" /></a> <a
+href="https://unpkg.com/gitalk/dist/gitalk.min.js"><embed
+src="https://img.badgesize.io/https://unpkg.com/gitalk/dist/gitalk.min.js?compression=gzip&amp;style=flat-square" /></a></p>
 <p>Gitalk 是一個基於 GitHub Issue 和 Preact 開發的評論插件。</p>
-<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul>
+<h2 id="特性">特性</h2>
+<ul>
 <li>使用 GitHub 登錄</li>
-<li>支持多語言 [en, zh-CN, zh-TW, es-ES, fr, ru, de, pl, ko, fa, ja]</li>
+<li>支持多語言 [en, zh-CN, zh-TW, es-ES, fr, ru, de, pl, ko, fa,
+ja]</li>
 <li>支持個人或組織</li>
 <li>無干擾模式（設置 distractionFreeMode 為 true 開啟）</li>
 <li>快捷鍵提交評論 （cmd|ctrl + enter）</li>
 </ul>
-<p><a href="https://github.com/gitalk/gitalk/blob/master/readme.md">Readme</a><br><a href="https://gitalk.github.io/">在線示例</a></p>
-<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>兩種方式</p>
+<p><a
+href="https://github.com/gitalk/gitalk/blob/master/readme.md">Readme</a>
+<a href="https://gitalk.github.io">在線示例</a></p>
+<h2 id="安裝">安裝</h2>
+<p>兩種方式</p>
 <ul>
 <li>直接引入</li>
 </ul>
-<pre><code class="html">  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&quot;&gt;
-  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&quot;&gt;&lt;/script&gt;
-
-  &lt;!-- or --&gt;
-
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gitalk/dist/gitalk.css&quot;&gt;
-  &lt;script src=&quot;https://unpkg.com/gitalk/dist/gitalk.min.js&quot;&gt;&lt;/script&gt;
-</code></pre>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- or --&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://unpkg.com/gitalk/dist/gitalk.css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://unpkg.com/gitalk/dist/gitalk.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span></code></pre></div>
 <ul>
 <li>npm 安裝</li>
 </ul>
-<pre><code class="sh">npm i --save gitalk
-</code></pre>
-<pre><code class="js">import &#39;gitalk/dist/gitalk.css&#39;
-import Gitalk from &#39;gitalk&#39;
-</code></pre>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>添加壹個容器：</p>
-<pre><code class="html">&lt;div id=&quot;gitalk-container&quot;&gt;&lt;/div&gt;
-</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> i <span class="at">--save</span> gitalk</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> <span class="st">&#39;gitalk/dist/gitalk.css&#39;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> Gitalk <span class="im">from</span> <span class="st">&#39;gitalk&#39;</span></span></code></pre></div>
+<h2 id="使用">使用</h2>
+<p>添加壹個容器：</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;gitalk-container&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span></code></pre></div>
 <p>用下面的 Javascript 代碼來生成 gitalk 插件：</p>
-<pre><code class="js">var gitalk = new Gitalk({
-  clientID: &#39;GitHub Application Client ID&#39;,
-  clientSecret: &#39;GitHub Application Client Secret&#39;,
-  repo: &#39;GitHub repo&#39;,
-  owner: &#39;GitHub repo owner&#39;,
-  admin: [&#39;GitHub repo owner and collaborators, only these guys can initialize github issues&#39;],
-  id: location.pathname,      // Ensure uniqueness and length less than 50
-  distractionFreeMode: false  // Facebook-like distraction free mode
-})
-
-gitalk.render(&#39;gitalk-container&#39;)
-</code></pre>
-<p>需要 <strong>GitHub Application</strong>，如果沒有 <a href="https://github.com/settings/applications/new">點擊這裡申請</a>，<code>Authorization callback URL</code> 填寫當前使用插件頁面的域名。</p>
-<h3 id="在React使用"><a href="#在React使用" class="headerlink" title="在React使用"></a>在React使用</h3><p>使用以下代碼引入Gitalk組件</p>
-<pre><code class="jsx">import GitalkComponent from &quot;gitalk/dist/gitalk-component&quot;;
-</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> gitalk <span class="op">=</span> <span class="kw">new</span> <span class="fu">Gitalk</span>({</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">clientID</span><span class="op">:</span> <span class="st">&#39;GitHub Application Client ID&#39;</span><span class="op">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">clientSecret</span><span class="op">:</span> <span class="st">&#39;GitHub Application Client Secret&#39;</span><span class="op">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">repo</span><span class="op">:</span> <span class="st">&#39;GitHub repo&#39;</span><span class="op">,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">owner</span><span class="op">:</span> <span class="st">&#39;GitHub repo owner&#39;</span><span class="op">,</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">admin</span><span class="op">:</span> [<span class="st">&#39;GitHub repo owner and collaborators, only these guys can initialize github issues&#39;</span>]<span class="op">,</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">id</span><span class="op">:</span> location<span class="op">.</span><span class="at">pathname</span><span class="op">,</span>      <span class="co">// Ensure uniqueness and length less than 50</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">distractionFreeMode</span><span class="op">:</span> <span class="kw">false</span>  <span class="co">// Facebook-like distraction free mode</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>gitalk<span class="op">.</span><span class="fu">render</span>(<span class="st">&#39;gitalk-container&#39;</span>)</span></code></pre></div>
+<p>需要 <strong>GitHub Application</strong>，如果沒有 <a
+href="https://github.com/settings/applications/new">點擊這裡申請</a>，<code>Authorization callback URL</code>
+填寫當前使用插件頁面的域名。</p>
+<h3 id="在react使用">在React使用</h3>
+<p>使用以下代碼引入Gitalk組件</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> GitalkComponent <span class="im">from</span> <span class="st">&quot;gitalk/dist/gitalk-component&quot;</span><span class="op">;</span></span></code></pre></div>
 <p>按以下方式在React中使用Gitalk組件</p>
-<pre><code class="jsx">&lt;GitalkComponent options={{
-  clientID: &quot;...&quot;,
-  // ...
-  // 設置項
-}} /&gt;
-</code></pre>
-<h2 id="設置"><a href="#設置" class="headerlink" title="設置"></a>設置</h2><ul>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;GitalkComponent</span> <span class="ot">options</span><span class="op">=</span><span class="va">{</span>{</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">  clientID</span><span class="op">:</span> <span class="st">&quot;...&quot;</span><span class="op">,</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 設置項</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}<span class="va">}</span> <span class="fu">/&gt;</span></span></code></pre></div>
+<h2 id="設置">設置</h2>
+<ul>
 <li><p><strong>clientID</strong> <code>String</code></p>
-<p><strong>必須</strong>. GitHub Application Client ID.</p>
-</li>
+<p><strong>必須</strong>. GitHub Application Client ID.</p></li>
 <li><p><strong>clientSecret</strong> <code>String</code></p>
-<p><strong>必須</strong>. GitHub Application Client Secret.</p>
-</li>
+<p><strong>必須</strong>. GitHub Application Client Secret.</p></li>
 <li><p><strong>repo</strong> <code>String</code></p>
-<p><strong>必須</strong>. GitHub repository.</p>
-</li>
+<p><strong>必須</strong>. GitHub repository.</p></li>
 <li><p><strong>owner</strong> <code>String</code></p>
-<p><strong>必須</strong>. GitHub repository 所有者，可以是個人或者組織。</p>
-</li>
+<p><strong>必須</strong>. GitHub repository
+所有者，可以是個人或者組織。</p></li>
 <li><p><strong>admin</strong> <code>Array</code></p>
-<p><strong>必須</strong>. GitHub repository 的所有者和合作者 (對這個 repository 有寫權限的用戶)。</p>
-</li>
+<p><strong>必須</strong>. GitHub repository 的所有者和合作者 (對這個
+repository 有寫權限的用戶)。</p></li>
 <li><p><strong>id</strong> <code>String</code></p>
 <p>Default: <code>location.href</code>.</p>
-<p>頁面的唯一標識。長度必須小於50。</p>
-</li>
-<li><p><strong>number</strong> <code>Number</code> </p>
+<p>頁面的唯一標識。長度必須小於50。</p></li>
+<li><p><strong>number</strong> <code>Number</code></p>
 <p>Default: <code>-1</code>.</p>
-<p>頁面的 issue ID，若未定義<code>number</code>屬性則會使用<code>id</code>進行定位。  </p>
-</li>
+<p>頁面的 issue
+ID，若未定義<code>number</code>屬性則會使用<code>id</code>進行定位。</p></li>
 <li><p><strong>labels</strong> <code>Array</code></p>
-<p>Default: <code>[&#39;Gitalk&#39;]</code>.</p>
-<p>GitHub issue 的標籤。</p>
-</li>
+<p>Default: <code>['Gitalk']</code>.</p>
+<p>GitHub issue 的標籤。</p></li>
 <li><p><strong>title</strong> <code>String</code></p>
 <p>Default: <code>document.title</code>.</p>
-<p>GitHub issue 的標題。</p>
-</li>
+<p>GitHub issue 的標題。</p></li>
 <li><p><strong>body</strong> <code>String</code></p>
 <p>Default: <code>location.href + header.meta[description]</code>.</p>
-<p>GitHub issue 的內容。</p>
-</li>
+<p>GitHub issue 的內容。</p></li>
 <li><p><strong>language</strong> <code>String</code></p>
-<p>Default: <code>navigator.language || navigator.userLanguage</code>.</p>
-<p>設置語言，支持 [en, zh-CN, zh-TW, es-ES, fr, ru, de, pl, ko, fa, ja]。</p>
-</li>
+<p>Default:
+<code>navigator.language || navigator.userLanguage</code>.</p>
+<p>設置語言，支持 [en, zh-CN, zh-TW, es-ES, fr, ru, de, pl, ko, fa,
+ja]。</p></li>
 <li><p><strong>perPage</strong> <code>Number</code></p>
 <p>Default: <code>10</code>.</p>
-<p>每次加載的數據大小，最多 100。</p>
-</li>
+<p>每次加載的數據大小，最多 100。</p></li>
 <li><p><strong>distractionFreeMode</strong> <code>Boolean</code></p>
 <p>Default: false。</p>
-<p>類似Facebook評論框的全屏遮罩效果.</p>
-</li>
+<p>類似Facebook評論框的全屏遮罩效果.</p></li>
 <li><p><strong>pagerDirection</strong> <code>String</code></p>
 <p>Default: ‘last’</p>
-<p>評論排序方式， <code>last</code>為按評論創建時間倒敘，<code>first</code>為按創建時間正序。</p>
-</li>
+<p>評論排序方式，
+<code>last</code>為按評論創建時間倒敘，<code>first</code>為按創建時間正序。</p></li>
 <li><p><strong>createIssueManually</strong> <code>Boolean</code></p>
 <p>Default: <code>false</code>.</p>
-<p>如果當前頁面沒有相應的 isssue 且登錄的用戶屬於 admin，則會自動創建 issue。如果設置為 <code>true</code>，則顯示一個初始化頁面，創建 issue 需要點擊 <code>init</code> 按鈕。</p>
-</li>
+<p>如果當前頁面沒有相應的 isssue 且登錄的用戶屬於 admin，則會自動創建
+issue。如果設置為 <code>true</code>，則顯示一個初始化頁面，創建 issue
+需要點擊 <code>init</code> 按鈕。</p></li>
 <li><p><strong>proxy</strong> <code>String</code></p>
-<p>Default: <code>https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</code>.</p>
-<p> GitHub oauth 請求到反向代理，為了支持 CORS。 <a href="https://github.com/isaacs/github/issues/330">為什麼要這樣?</a></p>
-</li>
+<p>Default:
+<code>https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</code>.</p>
+<p>GitHub oauth 請求到反向代理，為了支持 CORS。 <a
+href="https://github.com/isaacs/github/issues/330">為什麼要這樣?</a></p></li>
 <li><p><strong>flipMoveOptions</strong> <code>Object</code></p>
 <p>Default:</p>
-<pre><code class="js">  {
-    staggerDelayBy: 150,
-    appearAnimation: &#39;accordionVertical&#39;,
-    enterAnimation: &#39;accordionVertical&#39;,
-    leaveAnimation: &#39;accordionVertical&#39;,
-  }
-</code></pre>
-<p>評論列表的動畫。 <a href="https://github.com/joshwcomeau/react-flip-move/blob/master/documentation/enter_leave_animations.md">參考</a></p>
-</li>
+<div class="sourceCode" id="cb8"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">staggerDelayBy</span><span class="op">:</span> <span class="dv">150</span><span class="op">,</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">appearAnimation</span><span class="op">:</span> <span class="st">&#39;accordionVertical&#39;</span><span class="op">,</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">enterAnimation</span><span class="op">:</span> <span class="st">&#39;accordionVertical&#39;</span><span class="op">,</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">leaveAnimation</span><span class="op">:</span> <span class="st">&#39;accordionVertical&#39;</span><span class="op">,</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
+<p>評論列表的動畫。 <a
+href="https://github.com/joshwcomeau/react-flip-move/blob/master/documentation/enter_leave_animations.md">參考</a></p></li>
 <li><p><strong>enableHotKey</strong> <code>Boolean</code></p>
 <p>Default: <code>true</code>.</p>
-<p>啟用快捷鍵(cmd|ctrl + enter) 提交評論.</p>
-</li>
+<p>啟用快捷鍵(cmd|ctrl + enter) 提交評論.</p></li>
 </ul>
-<h2 id="實例方法"><a href="#實例方法" class="headerlink" title="實例方法"></a>實例方法</h2><ul>
-<li><p><strong>render(String&#x2F;HTMLElement)</strong></p>
-<p>初始化渲染並掛載插件。</p>
-</li>
+<h2 id="實例方法">實例方法</h2>
+<ul>
+<li><p><strong>render(String/HTMLElement)</strong></p>
+<p>初始化渲染並掛載插件。</p></li>
 </ul>
-<h2 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h2><p>已經包括了配置項和Gitalk類的類型定義，不包括React組件的類型定義。</p>
-<h2 id="貢獻"><a href="#貢獻" class="headerlink" title="貢獻"></a>貢獻</h2><ol>
-<li><a href="https://github.com/gitalk/gitalk/fork">Fork 代碼倉庫</a> 並從 master 創建你的分支</li>
+<h2 id="typescript">TypeScript</h2>
+<p>已經包括了配置項和Gitalk類的類型定義，不包括React組件的類型定義。</p>
+<h2 id="貢獻">貢獻</h2>
+<ol type="1">
+<li><a href="https://github.com/gitalk/gitalk/fork">Fork 代碼倉庫</a>
+並從 master 創建你的分支</li>
 <li>如果你添加的代碼需要測試，請添加測試！</li>
 <li>如果你修改了 API，請更新文檔。</li>
 <li>確保單元測試通過 (npm test).</li>
 <li>確保代碼風格一致 (npm run lint).</li>
-<li>提交你的代碼 (git commit) <a href="https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines">提交信息格式參考</a></li>
+<li>提交你的代碼 (git commit) <a
+href="https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines">提交信息格式參考</a></li>
 </ol>
-<h2 id="類似項目"><a href="#類似項目" class="headerlink" title="類似項目"></a>類似項目</h2><ul>
+<h2 id="類似項目">類似項目</h2>
+<ul>
 <li><a href="https://github.com/imsun/gitment">gitment</a></li>
 <li><a href="https://vssue.js.org/zh">vssue</a></li>
 </ul>
-<h2 id="許可"><a href="#許可" class="headerlink" title="許可"></a>許可</h2><p>MIT</p>
+<h2 id="許可">許可</h2>
+<p>MIT</p>
