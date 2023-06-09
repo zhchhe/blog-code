@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://example.com/2023/06/08/NexT%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/</loc>
+    
+    <lastmod>2023-06-08T06:36:10.081Z</lastmod>
+    
+    <date>1686200133000</date>
+    <title>NexT主题更改字体 | 青椒</title>
+    
+    <desc>可能 NexT 默认的字体你想更改一下，我这里应用了一款开源中文字体，霞鹜文楷。文件包括web使用教程可在GitHub上找到，一起来看看我是如何应用这款字体到我的网站上的吧。</desc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/06/08/%E6%98%BE%E7%A4%BAGit-%E7%8A%B6%E6%80%81%E4%BF%A1%E6%81%AF%E7%9A%84-power-shell-%E6%8F%92%E4%BB%B6/</loc>
+    
+    <lastmod>2023-06-08T06:13:40.619Z</lastmod>
+    
+    <date>1686204476000</date>
+    <title>显示 Git 状态信息的 power shell 插件 | 青椒</title>
+    
+    <desc>我们在使用 Git 的时候经常会需要使用 git status 来查看 Git 的状态，有了这款 power shell 插件，就可以实时显示 Git 的状态了。</desc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/06/08/%E8%A7%A3%E5%86%B3npm%E7%BB%8F%E5%B8%B8%E4%B8%8B%E8%BD%BD%E8%BF%87%E6%85%A2%E7%94%9A%E8%87%B3%E5%8D%A1%E4%BD%8F%E4%B8%8D%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2023-06-08T05:34:28.566Z</lastmod>
+    
+    <date>1686202022000</date>
+    <title>解决npm经常下载过慢甚至卡住不动的问题 | 青椒</title>
+    
+    <desc>有些时候需要用 npm 来安装一些工具，但是进度条可能会很慢甚至卡住，这时候就需要更换 npm 的下载地址了。</desc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/custom-name/index.html</loc>
+    
+    <lastmod>2023-06-07T08:24:52.501Z</lastmod>
+    
+    <date>1686126292000</date>
+    <title>custom-name | 青椒</title>
+    
+    <desc></desc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/06/04/hello-world/</loc>
+    
+    <lastmod>2023-06-07T07:53:11.021Z</lastmod>
+    
+    <date>1685888116644</date>
+    <title>Hello World | 青椒</title>
+    
+    <desc>Welcome to Hexo！ 这是您的第一篇文章。 查看 文档 了解更多信息。 如果你在使用 Hexo 的过程中遇到任何问题，你可以在 疑难解答 中找到答案，也可以在 GitHub 上问我。</desc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/06/06/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</loc>
+    
+    <lastmod>2023-06-07T07:44:21.936Z</lastmod>
+    
+    <date>1686060431000</date>
+    <title>GitHub Pages + Hexo搭建个人博客网站 | 青椒</title>
+    
+    <desc>GitHub是一个非常好用的用来存放代码或图片的仓库，搭配Hexo使用可以在 GitHub Pages 上搭建个人博客。</desc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/ceshi.html</loc>
+    
+    <lastmod>2023-06-07T07:44:21.936Z</lastmod>
+    
+    <date>1686060431000</date>
+    <title>GitHub Pages + Hexo搭建个人博客网站 | 青椒</title>
+    
+    <desc>GitHub是一个非常好用的用来存放代码或图片的仓库，搭配Hexo使用可以在 GitHub Pages 上搭建个人博客。</desc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/custom-name/ceshi.html</loc>
+    
+    <lastmod>2023-06-07T07:44:21.936Z</lastmod>
+    
+    <date>1686060431000</date>
+    <title>GitHub Pages + Hexo搭建个人博客网站 | 青椒</title>
+    
+    <desc>GitHub是一个非常好用的用来存放代码或图片的仓库，搭配Hexo使用可以在 GitHub Pages 上搭建个人博客。</desc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/ceshi.html</loc>
+    
+    <lastmod>2023-06-07T07:44:21.936Z</lastmod>
+    
+    <date>1686060431000</date>
+    <title>GitHub Pages + Hexo搭建个人博客网站 | 青椒</title>
+    
+    <desc>GitHub是一个非常好用的用来存放代码或图片的仓库，搭配Hexo使用可以在 GitHub Pages 上搭建个人博客。</desc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/index.html</loc>
+    
+    <lastmod>2023-06-06T06:32:43.668Z</lastmod>
+    
+    <date>1685784490000</date>
+    <title>categories | 青椒</title>
+    
+    <desc></desc>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/index.html</loc>
+    
+    <lastmod>2023-06-06T06:31:35.670Z</lastmod>
+    
+    <date>1686033070000</date>
+    <title>tags | 青椒</title>
+    
+    <desc></desc>
+  </url>
+  
+</urlset>
