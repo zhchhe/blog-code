@@ -111,6 +111,32 @@ alt="部署完成" />
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2023/06/11/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>！ 这是您的第一篇文章。
+查看 <a href="https://hexo.io/docs/">文档</a> 了解更多信息。
+如果你在使用 Hexo 的过程中遇到任何问题，你可以在 <a
+href="https://hexo.io/docs/troubleshooting.html">疑难解答</a>
+中找到答案，也可以在 <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。
+<span id="more"></span> ## 快速开始</p>
+<h3 id="创建一个新帖子">创建一个新帖子</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>更多信息: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="运行服务器">运行服务器</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>更多信息: <a href="https://hexo.io/docs/server.html">server</a></p>
+<h3 id="生成网站静态文件">生成网站静态文件</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>更多信息: <a
+href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="部署到远程站点">部署到远程站点</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>更多信息: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>NexT主题更改字体</title>
     <url>/2023/06/08/NexT%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/</url>
     <content><![CDATA[<p>可能 NexT
@@ -201,32 +227,6 @@ clean、hexo g、hexo d
         <tag>NexT</tag>
         <tag>更换主题字体</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/06/11/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>！ 这是您的第一篇文章。
-查看 <a href="https://hexo.io/docs/">文档</a> 了解更多信息。
-如果你在使用 Hexo 的过程中遇到任何问题，你可以在 <a
-href="https://hexo.io/docs/troubleshooting.html">疑难解答</a>
-中找到答案，也可以在 <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。
-<span id="more"></span> ## 快速开始</p>
-<h3 id="创建一个新帖子">创建一个新帖子</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>更多信息: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="运行服务器">运行服务器</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>更多信息: <a href="https://hexo.io/docs/server.html">server</a></p>
-<h3 id="生成网站静态文件">生成网站静态文件</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>更多信息: <a
-href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="部署到远程站点">部署到远程站点</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>更多信息: <a
-href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>为 NexT 添加评论系统 Gitalk</title>
@@ -459,8 +459,14 @@ href="https://blog.csdn.net/l13501058595/article/details/105762028">解决npm经
       </tags>
   </entry>
   <entry>
+    <title>categories</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
     <title>GitHub Pages + Hexo搭建个人博客网站</title>
-    <url>/custom-name/ceshi.html</url>
+    <url>/categories/ceshi.html</url>
     <content><![CDATA[<p>GitHub是一个非常好用的用来存放代码或图片的仓库，搭配Hexo使用可以在
 GitHub Pages 上搭建个人博客。</p>
 <span id="more"></span>
@@ -568,7 +574,7 @@ alt="部署完成" />
   </entry>
   <entry>
     <title>GitHub Pages + Hexo搭建个人博客网站</title>
-    <url>/categories/ceshi.html</url>
+    <url>/custom-name/ceshi.html</url>
     <content><![CDATA[<p>GitHub是一个非常好用的用来存放代码或图片的仓库，搭配Hexo使用可以在
 GitHub Pages 上搭建个人博客。</p>
 <span id="more"></span>
@@ -666,18 +672,6 @@ alt="部署完成" />
 </figure>
 <p>这时候再打开 <code>https://xxx.github.io</code>
 这个网页就会显示正常了。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[
 ]]></content>
   </entry>
   <entry>
@@ -780,6 +774,12 @@ alt="部署完成" />
 </figure>
 <p>这时候再打开 <code>https://xxx.github.io</code>
 这个网页就会显示正常了。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>tags</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[
 ]]></content>
   </entry>
 </search>
