@@ -111,32 +111,6 @@ alt="部署完成" />
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/06/11/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>！ 这是您的第一篇文章。
-查看 <a href="https://hexo.io/docs/">文档</a> 了解更多信息。
-如果你在使用 Hexo 的过程中遇到任何问题，你可以在 <a
-href="https://hexo.io/docs/troubleshooting.html">疑难解答</a>
-中找到答案，也可以在 <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。
-<span id="more"></span> ## 快速开始</p>
-<h3 id="创建一个新帖子">创建一个新帖子</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>更多信息: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="运行服务器">运行服务器</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>更多信息: <a href="https://hexo.io/docs/server.html">server</a></p>
-<h3 id="生成网站静态文件">生成网站静态文件</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>更多信息: <a
-href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="部署到远程站点">部署到远程站点</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>更多信息: <a
-href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>NexT主题更改字体</title>
     <url>/2023/06/08/NexT%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/</url>
     <content><![CDATA[<p>可能 NexT
@@ -229,99 +203,30 @@ clean、hexo g、hexo d
       </tags>
   </entry>
   <entry>
-    <title>为 NexT 添加评论系统 Gitalk</title>
-    <url>/2023/06/11/%E4%B8%BA-NexT-%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F-Gitalk/</url>
-    <content><![CDATA[<p>作为博客作者，我建议你为你的博客添加评论系统。添加评论系统，你可以与读者互动，收集反馈意见。Gitalk是一个简单易用且与你的博客主题兼容的评论系统，它使用GitHub作为后端存储，保证了数据的安全性。此外，Gitalk还支持Markdown语法等功能，你的博客将更具互动性和价值。
-——《由ChatGPT编写摘要》 <span id="more"></span> &gt; 参考网址及工具： &gt; <a
-href="https://github.com/gitalk/gitalk">gitalk/gitalk: Gitalk is a
-modern comment component based on Github Issue and Preact.</a> &gt; <a
-href="https://zhchhe.github.io/2023/06/08/NexT%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/">NexT主题更改字体
-| 青椒 (zhchhe.github.io)</a> &gt; ChatGPT</p>
-<h2 id="安装-gitalk">安装 Gitalk</h2>
-<p>在博客文件夹下打开 power shell 命令行，输入
-<code>npm i --save gitalk</code> 安装 Gitalk 插件，安装完成后去
-<code>Blog\node_modules\</code> 插件文件夹下找到 <code>gitalk</code>
-文件夹，将 <code>gitalk</code> 文件夹复制到
-<code>Blog\themes\next\source\css</code> 下，如图所示：</p>
-<figure>
-<img
-src="https://github.com/zhchhe/image-bed/raw/e688f0ae49febb25e0ef85bc64d1ab5dbb53397a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-09_17-46-34.png"
-alt="复制的 gitalk 文件夹位置" />
-<figcaption aria-hidden="true">复制的 gitalk 文件夹位置</figcaption>
-</figure>
-<h2 id="将-link-放入-html-头部">将  <code>&lt;link&gt;</code> 放入 HTML
-头部</h2>
-<p>HTML 头部路径为：<code>Blog\themes\next\layout\_layout.njk</code></p>
-<p>注意：这个代码不能全部复制，<code>&lt;head&gt;</code> 中的要复制到 <code>&lt;head&gt;</code> 中，就是说 <code>&lt;link rel="……" href="………………" /&gt;</code> 要加到 <code>&lt;head&gt;</code> 中，<code>&lt;style&gt;</code> 之间的也要加到 <code>&lt;head&gt;</code> 中。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- or --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://unpkg.com/gitalk/dist/gitalk.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/gitalk/dist/gitalk.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>将上述代码插入到 HTML 头部文件 <code>_layout.njk</code> 中，位置为
-<code>&lt;head&gt;</code> 与 <code>&lt;/head&gt;</code>
-中间即可，（插入时注意位置不要把其他的代码一分为二了）。</p>
-<p>在 HTML头部文件中，下方再插入一段代码：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% if page.comments and theme.gitalk.enable %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;gitalk-container&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<p>位置如图所示：</p>
-<figure>
-<img
-src="https://github.com/zhchhe/image-bed/raw/e688f0ae49febb25e0ef85bc64d1ab5dbb53397a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-09_17-52-08.png"
-alt="代码位置" />
-<figcaption aria-hidden="true">代码位置</figcaption>
-</figure>
-<h2 id="在-main.styl-文件中添加-gitalk.css">在 main.styl 文件中添加
-gitalk.css</h2>
-<p>main.styl
-文件路径：<code>Blog\themes\next\source\css\main.styl</code></p>
-<p>在最下方添加如下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// gitalk</span><br><span class="line">// --------------------------------------------------</span><br><span class="line">@import &#x27;gitalk/dist/gitalk.css&#x27;;</span><br><span class="line">// @import Gitalk from &#x27;gitalk&#x27;;</span><br></pre></td></tr></table></figure>
-<p>上述那两句话是 Gitalk 的 <a
-href="https://github.com/gitalk/gitalk">GitHub官网</a>
-上说的，但是我实操以后发现后面那一句怎样都报错，于是索性就把它注释掉了，发现也没啥事。如果这样会有什么问题的话还请评论告诉我啊！</p>
-<h2 id="注册-oauth-应用">注册 OAuth 应用</h2>
-<p>打开网址：<a href="https://github.com/settings/applications/new">新
-OAuth 应用 (github.com)</a> 注册 OAuth 应用 ，如图填写信息：</p>
-<figure>
-<img
-src="https://github.com/zhchhe/image-bed/raw/e688f0ae49febb25e0ef85bc64d1ab5dbb53397a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-09_18-09-29.png"
-alt="注册 OAuth 应用" />
-<figcaption aria-hidden="true">注册 OAuth 应用</figcaption>
-</figure>
-<p>记下客户端ID和密码，一会要用。</p>
-<figure>
-<img
-src="https://github.com/zhchhe/image-bed/raw/e688f0ae49febb25e0ef85bc64d1ab5dbb53397a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-09_18-12-49.png"
-alt="客户端ID 密码" />
-<figcaption aria-hidden="true">客户端ID 密码</figcaption>
-</figure>
-<h2 id="在-next-的配置文件中配置-gitalk">在 NexT 的配置文件中配置
-Gitalk</h2>
-<p>打开 NexT 的配置文件，找到 gitalk</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line">  <span class="comment"># Gitalk 评论系统</span></span><br><span class="line">  <span class="comment"># 更多信息: https://gitalk.github.io</span></span><br><span class="line">  <span class="attr">gitalk:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">github_id:</span> <span class="string">xxxxx</span> <span class="comment"># GitHub 仓库拥有者</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">Gitalk-Blog-Talk</span> <span class="comment"># GitHub用来存放评论的仓库名称，最好新建一个仓库专门放评论</span></span><br><span class="line">    <span class="attr">client_id:</span> <span class="string">xxxxxxxxxxxxxx</span> <span class="comment"># GitHub Application 客户端 ID</span></span><br><span class="line">    <span class="attr">client_secret:</span> <span class="string">xxxxxxxxxxxxxxxxxxxxxxxx</span> <span class="comment"># GitHub Application 客户端密码</span></span><br><span class="line">    <span class="attr">admin_user:</span> <span class="string">xxxxx</span> <span class="comment"># GitHub repo 拥有者 and 协作者, 与 github_id 填一样的就行</span></span><br><span class="line">    <span class="attr">distraction_free_mode:</span> <span class="literal">false</span> <span class="comment"># Facebook式无干扰模式</span></span><br><span class="line">    <span class="comment"># 当官方代理不可用时，可以改成自己的代理地址</span></span><br><span class="line">    <span class="comment">#proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token </span></span><br><span class="line">    <span class="comment"># 上面那个这是官方代理地址</span></span><br><span class="line">    <span class="comment"># Gitalk 的显示语言取决于用户的浏览器或系统环境</span></span><br><span class="line">    <span class="comment"># 如果你想让所有访问你网站的人看到统一的语言，你可以设置一个强制语言值</span></span><br><span class="line">    <span class="comment"># Available values: en | es-ES | fr | ru | zh-CN | zh-TW</span></span><br><span class="line">    <span class="attr">language:</span> <span class="string">zh-CN</span></span><br></pre></td></tr></table></figure>
-<h2 id="初始化创建">初始化创建</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>部署完进入文章最下方显示：</p>
-<figure>
-<img
-src="https://github.com/zhchhe/image-bed/raw/e688f0ae49febb25e0ef85bc64d1ab5dbb53397a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-09_18-17-18.png"
-alt="初始化创建" />
-<figcaption aria-hidden="true">初始化创建</figcaption>
-</figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">未找到相关的 Issues 进行评论</span><br><span class="line">请联系 @zhchhe 初始化创建</span><br></pre></td></tr></table></figure>
-<p>这时候点击 <code>使用Github登录</code> 用自己的 Github
-授权登录评论区就建好了。如图：</p>
-<figure>
-<img
-src="https://github.com/zhchhe/image-bed/raw/c439fec31648d42b74c5ce90e87cd54b22436ac4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-11_09-54-32.png"
-alt="效果如图" />
-<figcaption aria-hidden="true">效果如图</figcaption>
-</figure>
+    <title>Hello World</title>
+    <url>/2023/06/11/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>！ 这是您的第一篇文章。
+查看 <a href="https://hexo.io/docs/">文档</a> 了解更多信息。
+如果你在使用 Hexo 的过程中遇到任何问题，你可以在 <a
+href="https://hexo.io/docs/troubleshooting.html">疑难解答</a>
+中找到答案，也可以在 <a
+href="https://github.com/hexojs/hexo/issues">GitHub</a> 上问我。
+<span id="more"></span> ## 快速开始</p>
+<h3 id="创建一个新帖子">创建一个新帖子</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>更多信息: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="运行服务器">运行服务器</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>更多信息: <a href="https://hexo.io/docs/server.html">server</a></p>
+<h3 id="生成网站静态文件">生成网站静态文件</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>更多信息: <a
+href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="部署到远程站点">部署到远程站点</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>更多信息: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-      <categories>
-        <category>创建博客</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
-        <tag>Gitalk</tag>
-      </tags>
   </entry>
   <entry>
     <title>显示 Git 状态信息的 power shell 插件</title>
@@ -425,6 +330,101 @@ SHA - 青色表示分支与其远程匹配 - 绿色表示分支领先于其远�
       </tags>
   </entry>
   <entry>
+    <title>为 NexT 添加评论系统 Gitalk</title>
+    <url>/2023/06/11/%E4%B8%BA-NexT-%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F-Gitalk/</url>
+    <content><![CDATA[<p>作为博客作者，我建议你为你的博客添加评论系统。添加评论系统，你可以与读者互动，收集反馈意见。Gitalk是一个简单易用且与你的博客主题兼容的评论系统，它使用GitHub作为后端存储，保证了数据的安全性。此外，Gitalk还支持Markdown语法等功能，你的博客将更具互动性和价值。
+——《由ChatGPT编写摘要》 <span id="more"></span> &gt; 参考网址及工具： &gt; <a
+href="https://github.com/gitalk/gitalk">gitalk/gitalk: Gitalk is a
+modern comment component based on Github Issue and Preact.</a> &gt; <a
+href="https://zhchhe.github.io/2023/06/08/NexT%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93/">NexT主题更改字体
+| 青椒 (zhchhe.github.io)</a> &gt; ChatGPT</p>
+<h2 id="安装-gitalk">安装 Gitalk</h2>
+<p>在博客文件夹下打开 power shell 命令行，输入
+<code>npm i --save gitalk</code> 安装 Gitalk 插件，安装完成后去
+<code>Blog\node_modules\</code> 插件文件夹下找到 <code>gitalk</code>
+文件夹，将 <code>gitalk</code> 文件夹复制到
+<code>Blog\themes\next\source\css</code> 下，如图所示：</p>
+<figure>
+<img
+src="https://github.com/zhchhe/image-bed/raw/e688f0ae49febb25e0ef85bc64d1ab5dbb53397a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-09_17-46-34.png"
+alt="复制的 gitalk 文件夹位置" />
+<figcaption aria-hidden="true">复制的 gitalk 文件夹位置</figcaption>
+</figure>
+<h2 id="将-link-放入-html-头部">将  <code>&lt;link&gt;</code> 放入 HTML
+头部</h2>
+<p>HTML 头部路径为：<code>Blog\themes\next\layout\_layout.njk</code></p>
+<p>注意：这个代码不能全部复制，<code>&lt;head&gt;</code> 中的要复制到 <code>&lt;head&gt;</code> 中，就是说 <code>&lt;link rel="……" href="………………" /&gt;</code> 要加到 <code>&lt;head&gt;</code> 中，<code>&lt;style&gt;</code> 之间的也要加到 <code>&lt;head&gt;</code> 中。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- or --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://unpkg.com/gitalk/dist/gitalk.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/gitalk/dist/gitalk.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>将上述代码插入到 HTML 头部文件 <code>_layout.njk</code> 中，位置为
+<code>&lt;head&gt;</code> 与 <code>&lt;/head&gt;</code>
+中间即可，（插入时注意位置不要把其他的代码一分为二了）。</p>
+<p>在 HTML头部文件中，下方再插入一段代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% if page.comments and theme.gitalk.enable %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;gitalk-container&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<p>位置如图所示：</p>
+<figure>
+<img
+src="https://github.com/zhchhe/image-bed/raw/e688f0ae49febb25e0ef85bc64d1ab5dbb53397a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-09_17-52-08.png"
+alt="代码位置" />
+<figcaption aria-hidden="true">代码位置</figcaption>
+</figure>
+<h2 id="在-main.styl-文件中添加-gitalk.css">在 main.styl 文件中添加
+gitalk.css</h2>
+<p>main.styl
+文件路径：<code>Blog\themes\next\source\css\main.styl</code></p>
+<p>在最下方添加如下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// gitalk</span><br><span class="line">// --------------------------------------------------</span><br><span class="line">@import &#x27;gitalk/dist/gitalk.css&#x27;;</span><br><span class="line">// @import Gitalk from &#x27;gitalk&#x27;;</span><br></pre></td></tr></table></figure>
+<p>上述那两句话是 Gitalk 的 <a
+href="https://github.com/gitalk/gitalk">GitHub官网</a>
+上说的，但是我实操以后发现后面那一句怎样都报错，于是索性就把它注释掉了，发现也没啥事。如果这样会有什么问题的话还请评论告诉我啊！</p>
+<h2 id="注册-oauth-应用">注册 OAuth 应用</h2>
+<p>打开网址：<a href="https://github.com/settings/applications/new">新
+OAuth 应用 (github.com)</a> 注册 OAuth 应用 ，如图填写信息：</p>
+<figure>
+<img
+src="https://github.com/zhchhe/image-bed/raw/e688f0ae49febb25e0ef85bc64d1ab5dbb53397a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-09_18-09-29.png"
+alt="注册 OAuth 应用" />
+<figcaption aria-hidden="true">注册 OAuth 应用</figcaption>
+</figure>
+<p>记下客户端ID和密码，一会要用。</p>
+<figure>
+<img
+src="https://github.com/zhchhe/image-bed/raw/e688f0ae49febb25e0ef85bc64d1ab5dbb53397a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-09_18-12-49.png"
+alt="客户端ID 密码" />
+<figcaption aria-hidden="true">客户端ID 密码</figcaption>
+</figure>
+<h2 id="在-next-的配置文件中配置-gitalk">在 NexT 的配置文件中配置
+Gitalk</h2>
+<p>打开 NexT 的配置文件，找到 gitalk</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line">  <span class="comment"># Gitalk 评论系统</span></span><br><span class="line">  <span class="comment"># 更多信息: https://gitalk.github.io</span></span><br><span class="line">  <span class="attr">gitalk:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">github_id:</span> <span class="string">xxxxx</span> <span class="comment"># GitHub 仓库拥有者</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">Gitalk-Blog-Talk</span> <span class="comment"># GitHub用来存放评论的仓库名称，最好新建一个仓库专门放评论</span></span><br><span class="line">    <span class="attr">client_id:</span> <span class="string">xxxxxxxxxxxxxx</span> <span class="comment"># GitHub Application 客户端 ID</span></span><br><span class="line">    <span class="attr">client_secret:</span> <span class="string">xxxxxxxxxxxxxxxxxxxxxxxx</span> <span class="comment"># GitHub Application 客户端密码</span></span><br><span class="line">    <span class="attr">admin_user:</span> <span class="string">xxxxx</span> <span class="comment"># GitHub repo 拥有者 and 协作者, 与 github_id 填一样的就行</span></span><br><span class="line">    <span class="attr">distraction_free_mode:</span> <span class="literal">false</span> <span class="comment"># Facebook式无干扰模式</span></span><br><span class="line">    <span class="comment"># 当官方代理不可用时，可以改成自己的代理地址</span></span><br><span class="line">    <span class="comment">#proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token </span></span><br><span class="line">    <span class="comment"># 上面那个这是官方代理地址</span></span><br><span class="line">    <span class="comment"># Gitalk 的显示语言取决于用户的浏览器或系统环境</span></span><br><span class="line">    <span class="comment"># 如果你想让所有访问你网站的人看到统一的语言，你可以设置一个强制语言值</span></span><br><span class="line">    <span class="comment"># Available values: en | es-ES | fr | ru | zh-CN | zh-TW</span></span><br><span class="line">    <span class="attr">language:</span> <span class="string">zh-CN</span></span><br></pre></td></tr></table></figure>
+<h2 id="初始化创建">初始化创建</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>部署完进入文章最下方显示：</p>
+<figure>
+<img
+src="https://github.com/zhchhe/image-bed/raw/e688f0ae49febb25e0ef85bc64d1ab5dbb53397a/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-09_18-17-18.png"
+alt="初始化创建" />
+<figcaption aria-hidden="true">初始化创建</figcaption>
+</figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">未找到相关的 Issues 进行评论</span><br><span class="line">请联系 @zhchhe 初始化创建</span><br></pre></td></tr></table></figure>
+<p>这时候点击 <code>使用Github登录</code> 用自己的 Github
+授权登录评论区就建好了。如图：</p>
+<figure>
+<img
+src="https://github.com/zhchhe/image-bed/raw/c439fec31648d42b74c5ce90e87cd54b22436ac4/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/Snipaste_2023-06-11_09-54-32.png"
+alt="效果如图" />
+<figcaption aria-hidden="true">效果如图</figcaption>
+</figure>
+]]></content>
+      <categories>
+        <category>创建博客</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+        <tag>Gitalk</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决npm经常下载过慢甚至卡住不动的问题</title>
     <url>/2023/06/08/%E8%A7%A3%E5%86%B3npm%E7%BB%8F%E5%B8%B8%E4%B8%8B%E8%BD%BD%E8%BF%87%E6%85%A2%E7%94%9A%E8%87%B3%E5%8D%A1%E4%BD%8F%E4%B8%8D%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p>有些时候需要用 npm
@@ -457,12 +457,6 @@ href="https://blog.csdn.net/l13501058595/article/details/105762028">解决npm经
         <tag>更换主题字体</tag>
         <tag>疑难杂症</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[
-]]></content>
   </entry>
   <entry>
     <title>GitHub Pages + Hexo搭建个人博客网站</title>
@@ -567,8 +561,8 @@ alt="部署完成" />
 ]]></content>
   </entry>
   <entry>
-    <title>custom-name</title>
-    <url>/custom-name/index.html</url>
+    <title>categories</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[
 ]]></content>
   </entry>
@@ -774,6 +768,12 @@ alt="部署完成" />
 </figure>
 <p>这时候再打开 <code>https://xxx.github.io</code>
 这个网页就会显示正常了。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>custom-name</title>
+    <url>/custom-name/index.html</url>
+    <content><![CDATA[
 ]]></content>
   </entry>
   <entry>

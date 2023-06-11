@@ -3477,8 +3477,8 @@ code {
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f6f8fa;
-  border-radius: 3px;
+  background-color: #0c0c0c !important;
+  border-radius: 5px;
 }
 
 .markdown-body pre code {
